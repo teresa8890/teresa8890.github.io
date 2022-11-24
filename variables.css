@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+}
+.title-text{
+    font-size: 50px;
+    font-family: 'Julius Sans One', sans-serif;
+    color: #ffffff;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 0 10px 0;
+}
+.control{
+    width: 100%;
+    margin: 20px 0 30px 0;
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    margin: 10px;
+}
+.label-text{
+    font-size: 25px;
+    color: #ffffff;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+/* 修改滑桿樣式：https://medium.com/mo-learning/%E4%BF%AE%E6%94%B9-input-type-range-%E4%B9%8B-css-%E6%A8%A3%E5%BC%8F-ab57cd95cd65 */
+/* 先將預設的input樣式移除掉 */
+input[type="range"],
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+}
+
+/* 再加上自己要的樣式，分成三部分修改*/
+/* 主體樣式 */
+input[type="range"]{
+    width: 100px;
+    height: 21px;
+    overflow: hidden;
+
+    /* 滑鼠放上會改變屬標樣式 */
+    cursor: pointer;
+
+    /* 取消底線效果 */
+    outline: none;
+
+    background-color: rgba(170, 170, 170, 0);
+    margin: 0 10px 0;
+}
+
+/* 滑軌樣式 */
+input[type="range"]::-webkit-slider-runnable-track{
+    width: 100px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-top: 7px;
+}
+
+/* 滑動鈕樣式 */
+input[type="range"]::-webkit-slider-thumb{
+    position: relative;
+    width: 12px;
+    height: 12px;
+    margin-top: -4px;
+    background-color: #ffffff;
+    border-radius: 10%;
+}
+.color{
+    width: 100px;
+}
+
+.bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 20px 0;
+}
+
+
+
+/* ////////////// 建立變數 ////////////// */
+/* https://ithelp.ithome.com.tw/articles/10228111 */
+
+:root{
+    --base: #ffff00;
+    --spacing: 10px;
+    --blur: 10px;
+}
+img{
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+}
+.JS{
+    color: var(--base);
+}

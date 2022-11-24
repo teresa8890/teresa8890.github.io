@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <title>Playing with CSS Variables and JS</title>
+    <link rel="stylesheet" href="./variables.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1 class="title-text">Update CSS Variables with <span class="JS">JS</span></h1>
+        </div>
+        <div class="control">
+            <div class="btn btnSpacing">
+                <label class="label-text" for="">Spacing:</label>
+                <input class="slider" name="spacing" type="range" min="0" max="200" value="10" data-sizing="px">
+            </div>
+            <!-- input 有分「type」」屬性，這邊用到的是 range範圍、color顏色 -->
+            <!-- input 的 range 裡 min 是最小值，max 是最大值，step 是每隔間距，value 是預設數值 -->
+
+            <!-- data-* 可以加自創的屬性上去 ex: data-cool data-dog -->
+            <div class="btn btnBlur">
+                <label class="label-text" for="">Blur:</label>
+                <input class="slider" name="blur" type="range" min="0" max="200" value="10" data-sizing="px">
+            </div>
+            <div class="btn btnColor">
+                <label class="label-text" for="">Base Color:</label>
+                <input class="color" name="base" type="color" value="#ffff00">
+            </div>
+        </div>
+        <div class="bottom">
+            <img class="shibuya" src="./shibuya_sky.jpg" alt="">
+        </div>
+    </div>
+
+    <script src="./variables.js"></script>
+</body>
+</html>
